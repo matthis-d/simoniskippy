@@ -1,0 +1,27 @@
+{
+  "name": "simoniskippy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matthis-d",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "parcel": "^1.12.4",
+    "prettier": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}
